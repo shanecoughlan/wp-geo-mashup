@@ -1135,7 +1135,8 @@ class GeoMashup {
 		}
 
 		$atts_md5 =  md5( serialize( $atts ) );
-		set_transient( 'gmm' . $atts_md5, $map_data, 20 );
+		// TODO: conditionally set data transient?
+		// set_transient( 'gmm' . $atts_md5, $map_data, 20 );
 		set_transient( 'gmp' . $atts_md5, $atts, 60*60*24 );
 
 		$src_args = array(
